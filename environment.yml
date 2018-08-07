@@ -12,7 +12,6 @@ dependencies:
   - bzip2=1.0.6
   - ca-certificates=2018.4.16
   - cachecontrol=0.12.5
-  - certifi=2018.4.16
   - cffi=1.11.5
   - chardet=3.0.4
   - contextlib2=0.5.5
@@ -52,7 +51,6 @@ dependencies:
   - ncurses=6.1
   - networkx=1.11
   - nose=1.3.7
-  - openssl=1.0.2o
   - pandas=0.23.4
   - parso=0.3.1
   - patsy=0.5.0
@@ -94,12 +92,32 @@ dependencies:
   - xz=5.2.4
   - zlib=1.2.11
   - bz2file=0.98
+  - certifi=2018.4.16
+  - libgcc=7.2.0
   - libgcc-ng=7.2.0
   - libgfortran=3.0.0
   - libstdcxx-ng=7.2.0
   - mkl=11.3.3
   - numpy=1.10.4
+  - openssl=1.0.2o
   - scipy=0.17.1
+  - argtable2=2.13
+  - clustalo=1.2.4
+  - dialigntx=1.0.2
   - ete3=3.1.1
+  - ete_toolchain=3.0.0
+  - fasttree=2.1
+  - iqtree=1.5.5
+  - kalign=2.03
+  - mafft=6.861
+  - muscle=3.8.31
+  - paml=4.8
+  - phylobayes=4.1c
+  - phyml=20160115.patched
+  - pmodeltest=1.4
+  - raxml=8.2.11
+  - slr=1.4.3
+  - t_coffee=11.00
+  - trimal=1.4
 prefix: /home/jgc53/.conda/envs/iab-latest
 
