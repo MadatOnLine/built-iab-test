@@ -4,7 +4,6 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - appnope=0.1.0
   - asn1crypto=0.24.0
   - backcall=0.1.0
   - bzip2=1.0.6
@@ -13,14 +12,20 @@ dependencies:
   - certifi=2018.4.16
   - cffi=1.11.5
   - chardet=3.0.4
-  - clangdev=6.0.0
   - contextlib2=0.5.5
   - cryptography=2.3
   - cryptography-vectors=2.3
   - cycler=0.10.0
+  - dbus=1.13.0
   - decorator=4.3.0
+  - expat=2.2.5
+  - fontconfig=2.13.0
   - freetype=2.8.1
   - future=0.16.0
+  - gettext=0.19.8.1
+  - glib=2.55.0
+  - gst-plugins-base=1.12.5
+  - gstreamer=1.12.5
   - icu=58.2
   - idna=2.7
   - ipython=6.5.0
@@ -28,14 +33,13 @@ dependencies:
   - jedi=0.12.1
   - jpeg=9c
   - kiwisolver=1.0.1
-  - libcxx=6.0.0
   - libffi=3.2.1
   - libiconv=1.15
   - libpng=1.6.34
+  - libuuid=2.32.1
+  - libxcb=1.13
   - libxml2=2.9.8
   - libxslt=1.1.32
-  - llvm-meta=6.0.0
-  - llvmdev=6.0.0
   - lockfile=0.12.2
   - lxml=4.2.4
   - matplotlib=2.2.2
@@ -46,10 +50,12 @@ dependencies:
   - openssl=1.0.2o
   - pandas=0.17.1
   - parso=0.3.1
+  - pcre=8.41
   - pexpect=4.6.0
   - pickleshare=0.7.4
   - pip=18.0
   - prompt_toolkit=1.0.15
+  - pthread-stubs=0.4
   - ptyprocess=0.6.0
   - pycparser=2.18
   - pygments=2.2.0
@@ -75,13 +81,16 @@ dependencies:
   - urllib3=1.23
   - wcwidth=0.1.7
   - wheel=0.31.1
+  - xorg-libxau=1.0.8
+  - xorg-libxdmcp=1.1.2
   - xz=5.2.4
   - zlib=1.2.11
   - bz2file=0.98
-  - intel-openmp=2018.0.3
-  - libgfortran=3.0.1
-  - mkl=2018.0.3
-  - numpy=1.10.2
-  - scipy=1.1.0
+  - libgcc-ng=7.2.0
+  - libgfortran=3.0.0
+  - libstdcxx-ng=7.2.0
+  - mkl=11.3.3
+  - numpy=1.10.4
+  - scipy=0.17.1
   - ete3=3.1.1
 
