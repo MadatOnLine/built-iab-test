@@ -25,6 +25,6 @@ USER ${NB_USER}
 
 RUN which pip
 RUN conda create -n iab python=3.5 pyqt=4
-RUN conda activate iab
+RUN source activate iab
 RUN pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
 RUN which pip
