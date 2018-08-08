@@ -11,7 +11,7 @@ USER root
 # https://github.com/mossmatters/MJPythonNotebooks/blob/master/Dockerfile
 
 RUN apt-get update
-RUN apt-get install -y xvfb
+RUN apt-get install -y xvfb python-qt4
 
 RUN Xvfb :1 -screen 0 1600x1200x16 &
 RUN export DISPLAY=:99.0
@@ -22,5 +22,5 @@ RUN rm -rf work
 
 USER ${NB_USER}
  
-RUN conda install -c etetoolkit -c conda-forge ete3 python=3.5 pyqt=4
+RUN conda install python=3.5
 RUN pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
