@@ -1,7 +1,6 @@
 # Distributed under the terms of the Modified BSD License.
 
-
-FROM jupyter/minimal-notebook
+FROM jupyter/minimal-notebook:177037d09156
 
 LABEL maintainer="Greg Caporaso <gregcaporaso@gmail.com>"
 
@@ -17,7 +16,10 @@ RUN apt-get install -y xvfb
 RUN Xvfb :1 -screen 0 1600x1200x16 &
 RUN export DISPLAY=:99.0
 
-USER jovyan
+COPY . ${HOME}
+RUN chown -R ${NB_UID} ${HOME}
+
+USER ${NB_USER}
  
 RUN pip install ete3
 RUN pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
