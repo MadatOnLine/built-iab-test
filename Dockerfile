@@ -18,7 +18,8 @@ RUN export DISPLAY=:99.0
 
 RUN env
 
-COPY --chown="${NB_UID}" IAB-notebooks* ${HOME}/
+COPY IAB-notebooks* ${HOME}
+RUN chown -R ${NB_UID} ${HOME}
 
 USER ${NB_USER}
  
