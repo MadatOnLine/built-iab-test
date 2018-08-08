@@ -16,9 +16,9 @@ RUN apt-get install -y xvfb
 RUN Xvfb :1 -screen 0 1600x1200x16 &
 RUN export DISPLAY=:99.0
 
-COPY --chown=$NB_UID IAB-notebooks* ${HOME}/
+COPY --chown=${NB_UID} IAB-notebooks* ${HOME}/
 
-USER $NB_USER
+USER ${NB_USER}
  
 RUN conda install -c etetoolkit ete3 python=3.5
 RUN pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
