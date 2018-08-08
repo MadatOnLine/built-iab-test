@@ -24,7 +24,8 @@ RUN rm -rf work
 USER ${NB_USER}
 
 RUN which pip
-RUN conda env create -n iab python=3.5 pyqt=4
+RUN conda env create -n iab python=3.5
 RUN source activate iab
+RUN conda install pyqt=4
 RUN pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
 RUN which pip
