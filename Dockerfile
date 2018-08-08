@@ -1,7 +1,7 @@
 # Distributed under the terms of the Modified BSD License.
 
 
-FROM jupyter/base-notebook
+FROM jupyter/minimal-notebook
 
 LABEL maintainer="Greg Caporaso <gregcaporaso@gmail.com>"
 
