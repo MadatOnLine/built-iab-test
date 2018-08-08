@@ -119,5 +119,6 @@ dependencies:
   - slr=1.4.3
   - t_coffee=11.00
   - trimal=1.4
-prefix: /home/jgc53/.conda/envs/iab-latest
+  - pip:
+    - https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
 
