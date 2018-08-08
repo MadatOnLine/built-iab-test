@@ -17,7 +17,7 @@ RUN apt-get install -y xvfb
 RUN Xvfb :1 -screen 0 1600x1200x16 &
 RUN export DISPLAY=:99.0
 
-USER main
+USER jovyan
  
 RUN pip install ete3
 RUN pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
