@@ -17,4 +17,4 @@ USER ${NB_USER}
 
 RUN conda install python=3.5 pyqt=4
 RUN pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
-CMD ["xvfb-run", "jupyter", "notebook", "--ip", "0.0.0.0"]
+CMD ["xvfb-run", "start-notebook.sh"]
