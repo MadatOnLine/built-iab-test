@@ -11,15 +11,20 @@ ARG NB_USER=jovyan
 ARG NB_UID=1000
 ENV NB_USER=${NB_USER}
 ENV NB_UID=${NB_UID}
+ENV DISPLAY=:99
 
 RUN apt-get update
-RUN apt-get install -y xvfb
+RUN apt-get install -y xvfb x11-utils
+
+ADD xvfb_init /etc/init.d/xvfb
+RUN chmod a+x /etc/init.d/xvfb
+
+ADD run.sh /usr/local/bin/run.sh
+RUN chmod a+x /usr/local/bin/run.sh
 
 COPY IAB-notebooks* ${HOME}
-# RUN chown -R ${NB_UID} ${HOME}
 RUN rm -rf work
-RUN Xvfb :0 &
-ENV DISPLAY=:0
+# `fix-permissions` ships with jupyter/minimal-notebook
 RUN fix-permissions ${HOME}
 
 USER ${NB_UID}
@@ -27,4 +32,4 @@ USER ${NB_UID}
 RUN conda install python=3.5 pyqt=4
 RUN pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
 
-# CMD ["xvfb-run", "start-notebook.sh"]
+CMD ["run.sh"]
