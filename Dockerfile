@@ -12,12 +12,14 @@ ARG NB_UID=1000
 ENV NB_USER=${NB_USER}
 ENV NB_UID=${NB_UID}
 ENV DISPLAY=:99
+ENV PATH=/xvfb:$PATH
 
 RUN apt-get update
-RUN apt-get install -y xvfb x11-utils
+RUN apt-get install -y xvfb
 
-ADD xvfb_init /etc/init.d/xvfb
-RUN chmod a+x /etc/init.d/xvfb
+RUN mkdir /xvfb
+ADD jupyter /xvfb/jupyter
+RUN chmod a+x /xvfb/jupyter
 
 COPY IAB-notebooks* ${HOME}
 RUN rm -rf work
@@ -26,6 +28,5 @@ RUN fix-permissions ${HOME}
 
 USER ${NB_UID}
 
-RUN /etc/init.d/xvfb start
 RUN conda install python=3.5 pyqt=4
 RUN pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
