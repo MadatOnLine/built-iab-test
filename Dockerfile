@@ -19,9 +19,6 @@ RUN apt-get install -y xvfb x11-utils
 ADD xvfb_init /etc/init.d/xvfb
 RUN chmod a+x /etc/init.d/xvfb
 
-ADD run.sh /usr/local/bin/run.sh
-RUN chmod a+x /usr/local/bin/run.sh
-
 COPY IAB-notebooks* ${HOME}
 RUN rm -rf work
 # `fix-permissions` ships with jupyter/minimal-notebook
@@ -29,7 +26,6 @@ RUN fix-permissions ${HOME}
 
 USER ${NB_UID}
 
+RUN /etc/init.d/xvfb start
 RUN conda install python=3.5 pyqt=4
 RUN pip install https://github.com/caporaso-lab/An-Introduction-To-Applied-Bioinformatics/archive/master.zip
-
-CMD ["run.sh"]
