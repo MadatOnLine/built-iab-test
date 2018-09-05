@@ -1,3 +1,0 @@
-#!/bin/sh
-
-xvfb-run /opt/conda/bin/jupyter "$@"
